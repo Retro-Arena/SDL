@@ -280,7 +280,7 @@ KMSDRM_InitRotateBuffer(_THIS, int frameWidth, int frameHeight)
     // setup rotation
     src_info.fd = -1;
     src_info.mmuFlag = 1;
-    src_info.rotation = HAL_TRANSFORM_ROT_270;
+    src_info.rotation = HAL_TRANSFORM_ROT_0;
 
     // swap width and height here because our source buffer (user side render buffer) is 480x320 or 854x480
     rga_set_rect(&src_info.rect, 0, 0, frameHeight, frameWidth, (frameHeight == 480) ? frameHeight : (frameHeight + 32) & ~31, frameWidth, RK_FORMAT_BGRA_8888);
